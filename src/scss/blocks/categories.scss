@@ -1,0 +1,166 @@
+.section-categories {
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+// .section-categories:before {
+//     content: '';
+//     background-image: url(../../img/template/lines-cat.svg);
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     width: 100%;
+//     position: absolute;
+//     height: 150%;
+//     top: -110px;
+//     z-index: -1;
+//     transform: rotate(-4deg);
+// }
+
+.categories {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 24px;
+
+    &__item {
+        transition: $transition;
+
+        .icon {
+            background-color: $white;
+            box-shadow: inset 0 0 0 .5px $dark;
+            border-radius: 20px;
+            width: 92px;
+            height: 92px;
+            display: flex;
+            align-items: center;
+            justify-content: center;  
+            transition: $transition;  
+            position: relative;    
+
+            &:before {
+                content: '';
+                transition: $transition;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                position: absolute;
+                width: 50px;
+                height: 50px;
+            }
+
+            &.icon-rolls:before {
+                background-image: url(../img/categories/icon-rolls.png);
+            }
+            &.icon-hot-rolls:before {
+                background-image: url(../img/categories/icon-hot-rolls.png);
+            }            
+            &.icon-set:before {
+                background-image: url(../img/categories/icon-set.png);
+            }
+            &.icon-nigiri:before {
+                background-image: url(../img/categories/icon-nigiri.png);
+            }
+            &.icon-bigmac:before {
+                background-image: url(../img/categories/icon-bigmac.png);
+            }
+            &.icon-salat:before {
+                background-image: url(../img/categories/icon-salat.png);
+            }
+            &.icon-noodles:before {
+                background-image: url(../img/categories/icon-noodles.png);
+            }
+            &.icon-rice:before {
+                background-image: url(../img/categories/icon-rice.png);
+            }
+            &.icon-drink:before {
+                background-image: url(../img/categories/icon-drink.png);
+            }            
+        }
+
+        .name {
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 28px;
+            margin-top: 8px;
+            color: $dark;
+            transition: $transition;
+        }
+
+        img,
+        svg {
+            max-width: 50px;
+            max-height: 50px;
+            width: 100%;
+
+            path,
+            g rect {
+                transition: $transition;
+            }
+        }
+
+        &:hover {
+
+            .icon {
+                box-shadow: inset 0 0 0 3px $orange;
+                
+                &:before {
+                    animation: img-hover .5s;
+                }
+                &.icon-rolls:before {
+                    background-image: url(../img/categories/icon-rolls-colored.png);
+                }
+                &.icon-hot-rolls:before {
+                    background-image: url(../img/categories/icon-hot-rolls-colored.png);
+                }            
+                &.icon-set:before {
+                    background-image: url(../img/categories/icon-set-colored.png);
+                }
+                &.icon-nigiri:before {
+                    background-image: url(../img/categories/icon-nigiri-colored.png);
+                }
+                &.icon-bigmac:before {
+                    background-image: url(../img/categories/icon-bigmac-colored.png);
+                }
+                &.icon-salat:before {
+                    background-image: url(../img/categories/icon-salat-colored.png);
+                }
+                &.icon-noodles:before {
+                    background-image: url(../img/categories/icon-noodles-colored.png);
+                }
+                &.icon-rice:before {
+                    background-image: url(../img/categories/icon-rice-colored.png);
+                }
+                &.icon-drink:before {
+                    background-image: url(../img/categories/icon-drink-colored.png);
+                }                   
+            }
+
+            .name {
+                color: $orange;
+            }
+
+            svg {
+                path,
+                g rect { 
+                    fill: $orange;
+                }
+
+            }
+            
+        }
+    }
+
+}
+
+@keyframes img-hover {
+    0%,100% {
+        transform: scale(1,1)
+    }
+
+    40%,50% {
+        transform: scale(1.1,1.1)
+    }
+}

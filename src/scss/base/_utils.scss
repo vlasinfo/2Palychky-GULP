@@ -1,0 +1,62 @@
+.none {
+	display: none !important;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.no-scroll {
+    overflow-y: hidden;
+}
+
+.main {
+	margin-top: 76px;
+	@include xl {
+		margin-top: 61px;
+	}
+	@include sl {
+		margin-top: 58px;
+	}	
+}
+
+.btn {
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 1;
+	border: 0;
+	text-decoration: none;
+	padding: 10px 19px;
+	border: 1px solid $dark;
+	color: $dark;
+	border-radius: 10px;
+	transition: $transition;
+
+	&:hover {
+		color: $orange;
+		border-color: $orange;
+	}
+
+	&.orange {
+		color: $orange;
+		border-color: $orange;
+
+		&:hover {
+			background-color: $yellow;
+			color: $dark;
+			border-color: $yellow;
+		}
+	}
+
+
+
+}

@@ -1,0 +1,30 @@
+$screen-ssl-max: 440px;
+$screen-sl-max: 880px;
+$screen-ml-max: 1124px;
+$screen-xl-max: 1530px;
+
+// media devices
+
+@mixin ssl {
+  @media screen and (max-width: #{$screen-ssl-max}) {
+    @content;
+  }
+}
+
+@mixin sl {
+  @media screen and (max-width: #{$screen-sl-max}) {
+    @content;
+  }
+}
+
+@mixin ml {
+  @media screen and (max-width: #{$screen-ml-max}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media screen and (max-width: #{$screen-xl-max}) {
+    @content;
+  }
+}
